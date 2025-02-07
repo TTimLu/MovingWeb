@@ -1,0 +1,122 @@
+/* 基础样式 */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #fff;
+  padding: 15px 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.quote-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+}
+
+/* 首页大图 */
+.hero {
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero-btn {
+  margin-top: 20px;
+  background-color: #FF6600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* 服务 */
+.services {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.service-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service {
+  width: 250px;
+  text-align: center;
+}
+
+.service img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* 联系表单 */
+.contact {
+  padding: 50px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+}
+
+input, textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #007BFF;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+/* 页脚 */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

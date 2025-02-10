@@ -1,101 +1,64 @@
-/* 全局样式 */
 body {
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* 语言切换 */
-.language-switcher {
-  margin: 20px 0;
-}
-
-#languageSelect {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 20px;
-  border: 2px solid white;
-  background: transparent;
-  color: white;
-  outline: none;
-  cursor: pointer;
-}
-
-/* 头部 */
 header {
-  padding: 30px 20px;
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h1 {
-  font-size: 36px;
-  margin: 0;
-  font-weight: bold;
+header .logo img {
+    height: 40px;
 }
 
-p {
-  font-size: 18px;
-  margin: 5px 0;
+header nav ul {
+    display: flex;
+    list-style: none;
 }
 
-/* 导航 */
-nav {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 10px;
-  border-radius: 10px;
+header nav ul li {
+    margin: 0 15px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  transition: all 0.3s;
+header .language-selector select {
+    padding: 5px;
 }
 
-nav a:hover {
-  background: white;
-  color: #6a11cb;
-  border-radius: 5px;
+main {
+    padding: 40px;
 }
 
-/* 主要内容 */
-section {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  margin: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
+#intro {
+    text-align: center;
 }
 
-section:hover {
-  transform: translateY(-5px);
-}
-
-/* 按钮 */
-button {
-  background: #ff6f61;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 18px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-button:hover {
-  background: #ff3b2f;
-  transform: scale(1.05);
-}
-
-/* 页脚 */
 footer {
-  margin-top: 20px;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+form input, form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }

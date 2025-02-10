@@ -3,32 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="title">US Brother Moving</title>
+  <title>US Brother Moving</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
-  <select id="language-selector">
-  <option value="en">English</option>
-  <option value="zh">中文</option>
-  <option value="ko">한국어</option>
-  <option value="ja">日本語</option>
-</select>
-
 </head>
 <body>
+
+  <!-- Header Section -->
   <header>
-    <h1 id="hero-headline">Loading...</h1>
-    <p id="hero-subtext">Please wait...</p>
-    <button id="hero-button">Loading...</button>
+    <h1>US Brother Moving</h1>
+    <p>Your Trusted Moving Partner</p>
   </header>
 
-  <section>
-    <h2 id="about-title">Loading...</h2>
-    <p id="about-description">Loading...</p>
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <!-- Main Content Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We offer reliable and professional moving services. Whether it's residential, commercial, or storage, we handle it all.</p>
+    <button id="quoteButton">Get a Free Quote</button>
   </section>
 
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-card">
+      <h3>Residential Moving</h3>
+      <p>Safe and efficient moving for your home.</p>
+    </div>
+    <div class="service-card">
+      <h3>Commercial Moving</h3>
+      <p>We handle office and business moves with minimal downtime.</p>
+    </div>
+    <div class="service-card">
+      <h3>Storage Solutions</h3>
+      <p>Safe and secure storage options for your belongings.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
   <footer>
-    <h3 id="footer-contact">Loading...</h3>
-    <p id="footer-email">Loading...</p>
+    <p>&copy; 2025 US Brother Moving. All Rights Reserved.</p>
   </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>

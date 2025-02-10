@@ -4,23 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("language") || userLang || defaultLang;
   const languageSelect = document.getElementById("languageSelect");
 
-  // 设置语言选择器的默认值
   languageSelect.value = savedLang;
-
-  // 监听语言选择变化
   languageSelect.addEventListener("change", (e) => switchLanguage(e.target.value));
-
-  // 加载翻译
   loadTranslations(savedLang);
 });
 
-// 切换语言
 function switchLanguage(lang) {
   localStorage.setItem("language", lang);
   loadTranslations(lang);
 }
 
-// 加载 JSON 语言包
 function loadTranslations(lang) {
   fetch("translations.json")
     .then(response => response.json())
@@ -31,7 +24,6 @@ function loadTranslations(lang) {
     .catch(error => console.error("Error loading translations:", error));
 }
 
-// 应用翻译
 function applyTranslations(translations) {
   document.getElementById("header").textContent = translations.header;
   document.getElementById("tagline").textContent = translations.tagline;

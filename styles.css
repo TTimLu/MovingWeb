@@ -16,11 +16,12 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigation styles */
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+    justify-content: space-between; /* Push items to the edges */
+    align-items: center; /* Vertically center items */
+    padding: 0 20px; /* Add some padding */
 }
 
 nav ul {
@@ -28,7 +29,9 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Space between navigation links */
+    flex: 1; /* Allow the ul to grow and take available space */
+    justify-content: center; /* Center the navigation links */
 }
 
 nav ul li {
@@ -52,7 +55,7 @@ nav ul li a:hover {
     border: 1px solid #ccc;
     background-color: #fff;
     color: #333;
-    margin-left: auto;
+    margin-left: auto; /* Push to the right */
 }
 
 main {

@@ -7,7 +7,7 @@ window.addEventListener('scroll', function() {
     header.style.boxShadow = "none";
   }
 });
-
+ 
 // 滚动到联系表单
 function openForm() {
   document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });

@@ -1,60 +1,101 @@
+/* 全局样式 */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   text-align: center;
-  padding: 20px;
-  background-color: #f4f4f4;
-  color: #333;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
 }
 
-/* 语言切换选择器 */
+/* 语言切换 */
 .language-switcher {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 #languageSelect {
   padding: 10px;
   font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  border-radius: 20px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  outline: none;
+  cursor: pointer;
 }
 
-/* 导航栏 */
+/* 头部 */
+header {
+  padding: 30px 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+/* 导航 */
 nav {
-  background: #007BFF;
+  background: rgba(255, 255, 255, 0.2);
   padding: 10px;
+  border-radius: 10px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  padding: 10px 15px;
-  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: all 0.3s;
 }
 
 nav a:hover {
-  background: #0056b3;
+  background: white;
+  color: #6a11cb;
+  border-radius: 5px;
+}
+
+/* 主要内容 */
+section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+section:hover {
+  transform: translateY(-5px);
 }
 
 /* 按钮 */
 button {
-  background-color: #28a745;
+  background: #ff6f61;
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s;
 }
 
 button:hover {
-  background-color: #218838;
+  background: #ff3b2f;
+  transform: scale(1.05);
 }
 
 /* 页脚 */
 footer {
   margin-top: 20px;
-  padding: 10px;
-  background: #222;
-  color: white;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }

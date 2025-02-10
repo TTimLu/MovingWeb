@@ -10,8 +10,9 @@ const PORT = process.env.PORT || 3001;
 app.use(bodyParser.json());
 
 // Mailjet API credentials
-const MAILJET_API_KEY = 'your-mailjet-api-key';
-const MAILJET_SECRET_KEY = 'your-mailjet-secret-key';
+require('dotenv').config();
+const MAILJET_API_KEY = process.env.MAILJET_API_KEY;
+const MAILJET_SECRET_KEY = process.env.MAILJET_SECRET_KEY;
 
 // Endpoint to handle email sending
 app.post('/send-email', async (req, res) => {

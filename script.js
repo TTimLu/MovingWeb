@@ -1,43 +1,27 @@
-document.getElementById('contact-form').addEventListener('submit', function(event) {
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
     event.preventDefault();
 
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    const data = {
-        Messages: [
-            {
-                From: {
-                    Email: "your-email@example.com",
-                    Name: "US Brother Moving"
-                },
-                To: [
-                    {
-                        Email: "recipient-email@example.com",
-                        Name: "Recipient Name"
-                    }
-                ],
-                Subject: "New Contact Form Submission",
-                TextPart: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-            }
-        ]
-    };
+    try {
+        const response = await fetch('http://localhost:3001/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, message })
+        });
 
-    fetch('https://api.mailjet.com/v3.1/send', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Basic ' + btoa('your-mailjet-api-key:your-mailjet-secret-key')
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert('Message sent successfully!');
-    })
-    .catch(error => {
+        const data = await response.json();
+        if (data.success) {
+            alert('Message sent successfully!');
+        } else {
+            alert('Failed to send message: ' + data.message);
+        }
+    } catch (error) {
         console.error('Error:', error);
         alert('Failed to send message.');
-    });
+    }
 });

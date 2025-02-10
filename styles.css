@@ -33,6 +33,12 @@ nav {
 }
 
 /* Logo styles */
+.logo a {
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Ensure the link behaves like a block element */
+    align-items: center; /* Center the logo vertically */
+}
+
 .logo img {
     height: 50px; /* Adjust logo height */
     width: auto; /* Maintain aspect ratio */
@@ -249,11 +255,8 @@ footer p {
 
     /* Home Section */
     #home {
-        height: 40vh; /* Adjust height for smaller screens */
-    }
-
-    .home-content {
-        padding: 15px;
+        height: 40vh;
+		max-width: 100%; /* Adjust height for smaller screens */
     }
 
     /* Services Section */

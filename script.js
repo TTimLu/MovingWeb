@@ -1,52 +1,56 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const userLang = navigator.language.substring(0, 2);
-  const defaultLang = "en";
-  const savedLang = localStorage.getItem("language") || userLang || defaultLang;
-  const languageSelect = document.getElementById("languageSelect");
-
-  languageSelect.value = savedLang;
-  languageSelect.addEventListener("change", (e) => switchLanguage(e.target.value));
-  loadTranslations(savedLang);
+document.getElementById('language-selector').addEventListener('change', function() {
+    const lang = this.value;
+    switch (lang) {
+        case 'ja':
+            translatePage('ja');
+            break;
+        case 'zh':
+            translatePage('zh');
+            break;
+        case 'ko':
+            translatePage('ko');
+            break;
+        default:
+            translatePage('en');
+            break;
+    }
 });
 
-function switchLanguage(lang) {
-  localStorage.setItem("language", lang);
-  loadTranslations(lang);
-}
+function translatePage(language) {
+    const translations = {
+        en: {
+            heading: "Moving Made Easy",
+            introText: "We offer reliable moving services to make your transition smooth and hassle-free.",
+            quoteButton: "Get a Free Quote",
+            contact: "Contact Us",
+            sendMessage: "Send Message"
+        },
+        ja: {
+            heading: "簡単に引っ越し",
+            introText: "スムーズでストレスのない移行のために信頼性のある引っ越しサービスを提供します。",
+            quoteButton: "無料見積もり",
+            contact: "お問い合わせ",
+            sendMessage: "メッセージを送信"
+        },
+        zh: {
+            heading: "轻松搬家",
+            introText: "我们提供可靠的搬家服务，让您的过渡顺利无忧。",
+            quoteButton: "获取免费报价",
+            contact: "联系我们",
+            sendMessage: "发送信息"
+        },
+        ko: {
+            heading: "이사 쉽게 하기",
+            introText: "원활하고 번거롭지 않은 전환을 위해 신뢰할 수 있는 이사 서비스를 제공합니다.",
+            quoteButton: "무료 견적 받기",
+            contact: "연락처",
+            sendMessage: "메시지 보내기"
+        }
+    };
 
-function loadTranslations(lang) {
-  fetch("translations.json")
-    .then(response => response.json())
-    .then(translations => {
-      const selectedLang = translations[lang] ? lang : "en";
-      applyTranslations(translations[selectedLang]);
-    })
-    .catch(error => console.error("Error loading translations:", error));
-}
-
-
-function loadTranslations(lang) {
-  fetch("translations.json")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Failed to load translations.");
-      }
-      return response.json();
-    })
-    .then(translations => {
-      const selectedLang = translations[lang] ? lang : "en";
-      applyTranslations(translations[selectedLang]);
-    })
-    .catch(error => console.error("Error loading translations:", error));
-}
-
-
-function applyTranslations(translations) {
-  document.getElementById("header").textContent = translations.header;
-  document.getElementById("tagline").textContent = translations.tagline;
-  document.getElementById("about").textContent = translations.about;
-  document.getElementById("services").textContent = translations.services;
-  document.getElementById("contact").textContent = translations.contact;
-  document.getElementById("aboutText").textContent = translations.aboutText;
-  document.getElementById("quoteButton").textContent = translations.quoteButton;
+    document.getElementById('heading').textContent = translations[language].heading;
+    document.getElementById('intro-text').textContent = translations[language].introText;
+    document.getElementById('get-quote-button').textContent = translations[language].quoteButton;
+    document.getElementById('contact-section').querySelector('h2').textContent = translations[language].contact;
+    document.getElementById('submit-btn').textContent = translations[language].sendMessage;
 }

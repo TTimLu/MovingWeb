@@ -23,3 +23,25 @@ document.querySelectorAll('.hero-btn, .quote-btn').forEach(button => {
     this.style.transform = 'scale(1)';
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var userLang = navigator.language || navigator.userLanguage;
+    var lang = "en"; // 默认英语
+
+    if (userLang.includes("zh")) lang = "zh";
+    else if (userLang.includes("ko")) lang = "ko";
+    else if (userLang.includes("ja")) lang = "ja";
+
+    fetch("translations.json")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("title").innerText = data[lang].title;
+            document.getElementById("hero-headline").innerText = data[lang].hero_section.headline;
+            document.getElementById("hero-subtext").innerText = data[lang].hero_section.subtext;
+            document.getElementById("hero-button").innerText = data[lang].hero_section.button;
+            document.getElementById("about-title").innerText = data[lang].about_section.title;
+            document.getElementById("about-description").innerText = data[lang].about_section.description;
+        })
+        .catch(error => console.error("Error loading language file:", error));
+});

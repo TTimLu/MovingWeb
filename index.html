@@ -10,9 +10,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#" data-translate="home">Home</a></li>
-                <li><a href="#" data-translate="services">Services</a></li>
-                <li><a href="#" data-translate="contact">Contact</a></li>
+                <li><a href="#home" data-target="home" data-translate="home">Home</a></li>
+                <li><a href="#services" data-target="services" data-translate="services">Services</a></li>
+                <li><a href="#contact" data-target="contact" data-translate="contact">Contact</a></li>
             </ul>
             <select id="language-selector">
                 <option value="en">English</option>
@@ -27,37 +27,19 @@
         <section id="home">
             <h1 data-translate="welcome">Welcome to US Brother Moving</h1>
             <p data-translate="description">We provide the best moving services in the area.</p>
-            <img src="https://via.placeholder.com/1200x400" alt="Moving Services" style="width:100%; border-radius:10px;">
         </section>
 
         <section id="services">
             <h2 data-translate="services">Services</h2>
             <div class="service-cards">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" alt="Local Moving">
-                    <h3>Local Moving</h3>
-                    <p>We offer fast and reliable local moving services.</p>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" alt="Long Distance Moving">
-                    <h3>Long Distance Moving</h3>
-                    <p>Trust us for your long-distance moving needs.</p>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" alt="Packing Services">
-                    <h3>Packing Services</h3>
-                    <p>Let us handle the packing for you.</p>
-                </div>
+                <!-- Service cards content -->
             </div>
         </section>
 
         <section id="contact">
             <h2 data-translate="contact_us">Contact Us</h2>
             <form id="contact-form">
-                <input type="text" id="name" placeholder="Name" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <textarea id="message" placeholder="Message" required></textarea>
-                <button type="submit" data-translate="send">Send</button>
+                <!-- Contact form content -->
             </form>
         </section>
     </main>

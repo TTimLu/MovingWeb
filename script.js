@@ -24,6 +24,23 @@ function loadTranslations(lang) {
     .catch(error => console.error("Error loading translations:", error));
 }
 
+
+function loadTranslations(lang) {
+  fetch("translations.json")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Failed to load translations.");
+      }
+      return response.json();
+    })
+    .then(translations => {
+      const selectedLang = translations[lang] ? lang : "en";
+      applyTranslations(translations[selectedLang]);
+    })
+    .catch(error => console.error("Error loading translations:", error));
+}
+
+
 function applyTranslations(translations) {
   document.getElementById("header").textContent = translations.header;
   document.getElementById("tagline").textContent = translations.tagline;

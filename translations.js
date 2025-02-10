@@ -41,17 +41,38 @@ const translations = {
     }
 };
 
+
+// Function to update the language
 function updateLanguage(lang) {
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
-        element.textContent = translations[lang][key];
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
     });
 }
 
+// Function to detect browser language and set the page language
+function detectLanguage() {
+    const browserLanguage = navigator.language.split('-')[0]; // Get the primary language (e.g., "en" from "en-US")
+    const supportedLanguages = ['en', 'ja', 'zh', 'ko']; // Supported languages
+
+    // Check if the browser language is supported
+    if (supportedLanguages.includes(browserLanguage)) {
+        updateLanguage(browserLanguage);
+        document.getElementById('language-selector').value = browserLanguage; // Update the language selector
+    } else {
+        // Default to English if the browser language is not supported
+        updateLanguage('en');
+        document.getElementById('language-selector').value = 'en';
+    }
+}
+
+// Call the detectLanguage function when the page loads
+document.addEventListener('DOMContentLoaded', detectLanguage);
+
+// Add event listener to the language selector
 document.getElementById('language-selector').addEventListener('change', (event) => {
     const selectedLanguage = event.target.value;
     updateLanguage(selectedLanguage);
 });
-
-// Set default language to English
-updateLanguage('en');

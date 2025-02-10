@@ -1,1 +1,74 @@
 
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>美国兄弟搬家公司</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt"></script> <!-- 用于实现倾斜效果 -->
+</head>
+<body>
+  <!-- 导航栏 -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">服务</a></li>
+        <li><a href="#">客户评价</a></li>
+        <li><a href="#">联系我们</a></li>
+      </ul>
+      <button class="quote-btn" onclick="openForm()">获取报价</button>
+    </nav>
+  </header>
+
+  <!-- 主页大图 -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>美国兄弟搬家公司</h1>
+      <p>专业的搬家服务，让您的搬家更轻松</p>
+      <button class="hero-btn">获取免费报价</button>
+    </div>
+  </section>
+
+  <!-- 服务 -->
+  <section class="services">
+    <h2>我们的服务</h2>
+    <div class="service-container">
+      <div class="service">
+        <img src="local-moving.jpg" alt="Local Moving">
+        <h3>本地搬家</h3>
+      </div>
+      <div class="service">
+        <img src="long-distance.jpg" alt="Long Distance">
+        <h3>长途搬家</h3>
+      </div>
+      <div class="service">
+        <img src="commercial.jpg" alt="Commercial Moving">
+        <h3>商业搬家</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系表单 -->
+  <section class="contact" id="contact">
+    <h2>联系我们</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" id="contact-form">
+      <input type="text" name="name" placeholder="姓名" required>
+      <input type="email" name="email" placeholder="邮箱" required>
+      <textarea name="message" placeholder="您的留言" required></textarea>
+      <button type="submit">发送</button>
+    </form>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <p>© 2024 美国兄弟搬家公司 | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

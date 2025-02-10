@@ -9,6 +9,10 @@
     "about_section": {
       "title": "About Us",
       "description": "We have helped thousands of customers move with ease."
+    },
+    "footer": {
+      "contact": "Contact Us",
+      "email": "Email: info@usbrothermoving.com"
     }
   },
   "zh": {
@@ -21,6 +25,10 @@
     "about_section": {
       "title": "关于我们",
       "description": "我们已帮助数千名客户顺利搬家。"
+    },
+    "footer": {
+      "contact": "联系我们",
+      "email": "邮箱：info@usbrothermoving.com"
     }
   },
   "ko": {
@@ -33,6 +41,10 @@
     "about_section": {
       "title": "회사 소개",
       "description": "우리는 수천 명의 고객이 원활하게 이사하도록 도왔습니다."
+    },
+    "footer": {
+      "contact": "문의하기",
+      "email": "이메일: info@usbrothermoving.com"
     }
   },
   "ja": {
@@ -45,6 +57,10 @@
     "about_section": {
       "title": "私たちについて",
       "description": "何千人ものお客様の引越しをサポートしてきました。"
+    },
+    "footer": {
+      "contact": "お問い合わせ",
+      "email": "メール: info@usbrothermoving.com"
     }
   }
 }

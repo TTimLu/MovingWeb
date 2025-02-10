@@ -27,7 +27,7 @@ document.querySelectorAll('.hero-btn, .quote-btn').forEach(button => {
 
 document.addEventListener("DOMContentLoaded", function () {
     var userLang = navigator.language || navigator.userLanguage;
-    var lang = "en"; // 默认英语
+    var lang = "en"; // 默认语言
 
     if (userLang.includes("zh")) lang = "zh";
     else if (userLang.includes("ko")) lang = "ko";
@@ -42,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("hero-button").innerText = data[lang].hero_section.button;
             document.getElementById("about-title").innerText = data[lang].about_section.title;
             document.getElementById("about-description").innerText = data[lang].about_section.description;
+            document.getElementById("footer-contact").innerText = data[lang].footer.contact;
+            document.getElementById("footer-email").innerText = data[lang].footer.email;
         })
         .catch(error => console.error("Error loading language file:", error));
 });

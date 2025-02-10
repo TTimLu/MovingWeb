@@ -25,14 +25,13 @@ document.querySelectorAll('.hero-btn, .quote-btn').forEach(button => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    var userLang = navigator.language || navigator.userLanguage;
-    var lang = "en"; // 默认语言
+document.getElementById("language-selector").addEventListener("change", function () {
+    var selectedLang = this.value;
+    localStorage.setItem("selectedLanguage", selectedLang);
+    loadLanguage(selectedLang);
+});
 
-    if (userLang.includes("zh")) lang = "zh";
-    else if (userLang.includes("ko")) lang = "ko";
-    else if (userLang.includes("ja")) lang = "ja";
-
+function loadLanguage(lang) {
     fetch("translations.json")
         .then(response => response.json())
         .then(data => {
@@ -44,6 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("about-description").innerText = data[lang].about_section.description;
             document.getElementById("footer-contact").innerText = data[lang].footer.contact;
             document.getElementById("footer-email").innerText = data[lang].footer.email;
-        })
-        .catch(error => console.error("Error loading language file:", error));
-});
+        });
+}
+
+// 读取本地存储的语言设置
+var savedLang = localStorage.getItem("selectedLanguage") || "en";
+loadLanguage(savedLang);
+

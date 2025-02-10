@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USブラザー引越し会社</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- ナビゲーション -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="ロゴ">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#">サービス</a></li>
+        <li><a href="#">お客様の声</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+      <button class="quote-btn" onclick="openForm()">見積もりを取得</button>
+    </nav>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>USブラザー引越し会社</h1>
+      <p>プロの引越しサービスで、引越しをもっと簡単に</p>
+      <button class="hero-btn">無料見積もり</button>
+    </div>
+  </section>
+
+  <!-- サービス -->
+  <section class="services">
+    <h2>当社のサービス</h2>
+    <div class="service-container">
+      <div class="service">
+        <img src="local-moving.jpg" alt="近距離引越し">
+        <h3>近距離引越し</h3>
+      </div>
+      <div class="service">
+        <img src="long-distance.jpg" alt="長距離引越し">
+        <h3>長距離引越し</h3>
+      </div>
+      <div class="service">
+        <img src="commercial.jpg" alt="商業用引越し">
+        <h3>商業用引越し</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section class="contact" id="contact">
+    <h2>お問い合わせ</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" id="contact-form">
+      <input type="text" name="name" placeholder="お名前" required>
+      <input type="email" name="email" placeholder="メールアドレス" required>
+      <textarea name="message" placeholder="メッセージ" required></textarea>
+      <button type="submit">送信</button>
+    </form>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    <p>© 2024 USブラザー引越し会社 | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

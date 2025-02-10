@@ -1,0 +1,50 @@
+{
+  "en": {
+    "title": "US Brother Moving",
+    "hero_section": {
+      "headline": "Professional Moving Services",
+      "subtext": "Making your relocation easier and stress-free.",
+      "button": "Get a Free Quote"
+    },
+    "about_section": {
+      "title": "About Us",
+      "description": "We have helped thousands of customers move with ease."
+    }
+  },
+  "zh": {
+    "title": "美国兄弟搬家公司",
+    "hero_section": {
+      "headline": "专业搬家服务",
+      "subtext": "让您的搬家变得更轻松、无忧。",
+      "button": "获取免费报价"
+    },
+    "about_section": {
+      "title": "关于我们",
+      "description": "我们已帮助数千名客户顺利搬家。"
+    }
+  },
+  "ko": {
+    "title": "미국 브라더 이사",
+    "hero_section": {
+      "headline": "전문적인 이사 서비스",
+      "subtext": "편안하고 쉬운 이사를 도와드립니다.",
+      "button": "무료 견적 받기"
+    },
+    "about_section": {
+      "title": "회사 소개",
+      "description": "우리는 수천 명의 고객이 원활하게 이사하도록 도왔습니다."
+    }
+  },
+  "ja": {
+    "title": "US ブラザー引越し",
+    "hero_section": {
+      "headline": "プロの引越しサービス",
+      "subtext": "ストレスのない引越しをサポートします。",
+      "button": "無料見積もり"
+    },
+    "about_section": {
+      "title": "私たちについて",
+      "description": "何千人ものお客様の引越しをサポートしてきました。"
+    }
+  }
+}

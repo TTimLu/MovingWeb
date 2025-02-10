@@ -8,52 +8,39 @@
 </head>
 <body>
 
-  <!-- Header Section -->
+  <!-- 语言切换 -->
+  <div class="language-switcher">
+    <select id="languageSelect" onchange="switchLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
+    </select>
+  </div>
+
+  <!-- 头部 -->
   <header>
-    <h1>US Brother Moving</h1>
-    <p>Your Trusted Moving Partner</p>
+    <h1 id="header">US Brother Moving</h1>
+    <p id="tagline">Your Trusted Moving Partner</p>
   </header>
 
-  <!-- Navigation -->
+  <!-- 导航 -->
   <nav>
-    <a href="#about">About Us</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact Us</a>
+    <a id="about" href="#about">About Us</a>
+    <a id="services" href="#services">Services</a>
+    <a id="contact" href="#contact">Contact Us</a>
   </nav>
-  
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-  
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="service-card">
-      <h3>Residential Moving</h3>
-      <p>Safe and efficient moving for your home.</p>
-    </div>
-    <div class="service-card">
-      <h3>Commercial Moving</h3>
-      <p>We handle office and business moves with minimal downtime.</p>
-    </div>
-    <div class="service-card">
-      <h3>Storage Solutions</h3>
-      <p>Safe and secure storage options for your belongings.</p>
-    </div>
+
+  <!-- 主要内容 -->
+  <section id="about">
+    <h2 id="aboutTitle">About Us</h2>
+    <p id="aboutText">We offer reliable and professional moving services.</p>
+    <button id="quoteButton">Get a Free Quote</button>
   </section>
 
-
-
-  <!-- Footer Section -->
+  <!-- 页脚 -->
   <footer>
-    <p>&copy; 2025 US Brother Moving. All Rights Reserved.</p>
+    <p id="footer">&copy; 2025 US Brother Moving. All Rights Reserved.</p>
   </footer>
 
   <script src="scripts.js"></script>

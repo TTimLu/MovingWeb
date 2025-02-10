@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Language Redirect</title>
-  <script>
-    var userLang = navigator.language || navigator.userLanguage;
-    if (userLang.includes('zh')) {
-      window.location.href = 'index_zh.html';
-    } else if (userLang.includes('ko')) {
-      window.location.href = 'index_ko.html';
-    } else if (userLang.includes('ja')) {
-      window.location.href = 'index_ja.html';
-    } else {
-      window.location.href = 'index_en.html'; // 默认英语
-    }
-  </script>
+  <title id="title">US Brother Moving</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <p>loading...</p>
+  <header>
+    <h1 id="hero-headline">Loading...</h1>
+    <p id="hero-subtext">Please wait...</p>
+    <button id="hero-button">Loading...</button>
+  </header>
+
+  <section>
+    <h2 id="about-title">Loading...</h2>
+    <p id="about-description">Loading...</p>
+  </section>
 </body>
 </html>

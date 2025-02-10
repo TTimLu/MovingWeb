@@ -6,29 +6,32 @@ body {
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* 确保 body 至少占满整个视口高度 */
 }
 
 header {
     background: linear-gradient(135deg, #333, #555);
     color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
@@ -43,20 +46,19 @@ nav ul li a:hover {
 }
 
 #language-selector {
-    margin-left: 20px;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
     background-color: #fff;
     color: #333;
+    margin-left: auto;
 }
 
 main {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    flex: 1; /* 让 main 区域占据剩余空间 */
-    padding-bottom: 100px; /* 确保内容不会被 footer 挡住 */
+    padding-bottom: 100px;
 }
 
 section {
@@ -118,116 +120,27 @@ footer {
     text-align: center;
     padding: 20px 0;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-    position: static; /* 移除 fixed 定位 */
-    width: 100%;
 }
 
 footer p {
-    margin: 0; /* 移除默认的段落外边距 */
-    text-align: center; /* 确保文字居中 */
+    margin: 0;
+    text-align: center;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
+    nav {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
-    nav ul li {
-        margin: 10px 0;
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 
     #language-selector {
+        margin-left: 0;
         margin-top: 10px;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    section {
-        padding: 15px;
-    }
-}
-
-/* Animation for header */
-header {
-    animation: fadeInDown 1s ease;
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Animation for sections */
-section {
-    animation: fadeInUp 1s ease;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Service Cards */
-.service-cards {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 calc(33.333% - 40px);
-    max-width: calc(33.333% - 40px);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card h3 {
-    padding: 15px;
-    margin: 0;
-    font-size: 20px;
-    color: #333;
-}
-
-.card p {
-    padding: 0 15px 15px;
-    margin: 0;
-    color: #666;
-}
-
-@media (max-width: 768px) {
-    .card {
-        flex: 1 1 100%;
-        max-width: 100%;
     }
 }

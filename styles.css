@@ -6,6 +6,9 @@ body {
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 确保 body 至少占满整个视口高度 */
 }
 
 header {
@@ -52,6 +55,8 @@ main {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    flex: 1; /* 让 main 区域占据剩余空间 */
+    padding-bottom: 100px; /* 确保内容不会被 footer 挡住 */
 }
 
 section {
@@ -112,8 +117,14 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    position: static; /* 移除 fixed 定位 */
+    width: 100%;
+}
+
+footer p {
+    margin: 0; /* 移除默认的段落外边距 */
+    text-align: center; /* 确保文字居中 */
 }
 
 /* Responsive Design */
@@ -172,7 +183,7 @@ section {
     }
 }
 
-
+/* Service Cards */
 .service-cards {
     display: flex;
     justify-content: space-between;

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>US Brother Moving Company</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Customer Reviews</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <button class="quote-btn" onclick="openForm()">Get a Quote</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>US Brother Moving Company</h1>
+      <p>Professional moving services to make your relocation easier</p>
+      <button class="hero-btn">Get a Free Quote</button>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-container">
+      <div class="service">
+        <img src="local-moving.jpg" alt="Local Moving">
+        <h3>Local Moving</h3>
+      </div>
+      <div class="service">
+        <img src="long-distance.jpg" alt="Long Distance">
+        <h3>Long Distance Moving</h3>
+      </div>
+      <div class="service">
+        <img src="commercial.jpg" alt="Commercial Moving">
+        <h3>Commercial Moving</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 US Brother Moving Company | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

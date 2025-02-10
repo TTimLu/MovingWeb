@@ -19,6 +19,7 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -40,12 +41,12 @@ nav ul li a:hover {
 }
 
 #language-selector {
-    margin-left: 20px;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
     background-color: #fff;
     color: #333;
+    margin-left: auto;
 }
 
 main {

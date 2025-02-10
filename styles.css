@@ -224,8 +224,9 @@ footer p {
     margin: 45; /* Remove default margin */
 }
 
-/* Responsive Design */
+/* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
+    /* Navigation */
     nav {
         flex-direction: column;
         align-items: center;
@@ -246,6 +247,16 @@ footer p {
         margin-top: 10px;
     }
 
+    /* Home Section */
+    #home {
+        height: 40vh; /* Adjust height for smaller screens */
+    }
+
+    .home-content {
+        padding: 15px;
+    }
+
+    /* Services Section */
     .service-cards {
         flex-direction: column;
     }
@@ -255,11 +266,33 @@ footer p {
         max-width: 100%;
     }
 
+    /* Headings and Paragraphs */
     h1, h2, p {
         max-width: 90%;
     }
 
+    h1 {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+
+    h2 {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+
+    p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Form */
     form {
         max-width: 90%;
+    }
+
+    form input, form textarea {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    form button {
+        font-size: 14px; /* Smaller font size for mobile */
     }
 }

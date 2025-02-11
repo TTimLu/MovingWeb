@@ -256,7 +256,6 @@ footer p {
     /* Home Section */
     #home {
         height: 40vh;
-		max-width: 100%; /* Adjust height for smaller screens */
     }
 
     /* Services Section */

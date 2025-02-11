@@ -36,7 +36,7 @@
         });
 });
 
-
+ 
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav a[data-target]').forEach(link => {
     link.addEventListener('click', function (event) {

@@ -83,7 +83,7 @@ nav ul li a:hover {
 #home {
     position: relative;
     height: 50vh; /* 50% of the viewport height */
-    min-height: 300px; /* 最小高度 */
+    min-height: 100px; /* 最小高度 */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -94,20 +94,16 @@ nav ul li a:hover {
 
 .background-slideshow {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     animation: slideshow 10s infinite; /* 10s total duration for 2 images */
+    background-repeat: no-repeat;
 }
 
 
-#services {
-    margin-top: 0px; /* Add margin to the top */
-}
 
 /* Keyframes for slideshow animation with 2 images */
 @keyframes slideshow {
@@ -240,7 +236,7 @@ footer p {
     }
 
     .logo {
-        margin-bottom: 10px;
+        margin-right: auto;
     }
 
     nav ul {
@@ -249,20 +245,21 @@ footer p {
         text-align: center;
     }
 
+
     #language-selector {
-        margin-left: 0;
+        margin-left: auto;
         margin-top: 10px;
     }
 
     /* Home Section */
     #home {
-        height: 60vh; /* 在手机上占满整个视口高度 */
-        min-height: 350px;
-  
+        height: 40vh; /* 在手机上占满整个视口高度 */
+        min-height: 300px;
     }
 
     .background-slideshow {
-        background-position: center center; /* 保持居中 */
+        background-size: contain; /* 让整个图片完整显示 */
+        background-position: center; /* 保持居中 */
         animation: slideshow 15s infinite; /* 增加动画时间，减少频繁切换 */
 
     }

@@ -83,6 +83,7 @@ nav ul li a:hover {
 #home {
     position: relative;
     height: 50vh; /* 50% of the viewport height */
+    min-height: 300px; /* 最小高度 */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -93,7 +94,6 @@ nav ul li a:hover {
 
 .background-slideshow {
     position: absolute;
-	margin: auto;
     top: 0;
     left: 0;
     width: 100%;
@@ -255,7 +255,12 @@ footer p {
 
     /* Home Section */
     #home {
-        height: 40vh;
+        height: 100vh; /* 在手机上占满整个视口高度 */
+        font-size: 1.5rem; /* 增大字体大小 */
+    }
+
+    .background-slideshow {
+        animation: slideshow 5s infinite; /* 在手机上动画速度更快 */
     }
 
     /* Services Section */

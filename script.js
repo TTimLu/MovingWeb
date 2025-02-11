@@ -1,30 +1,42 @@
-document.getElementById('contact-form').addEventListener('submit', async function(event) {
-    event.preventDefault();
+    // 初始化 EmailJS
+    emailjs.init('y4CVoupE5M1LSDZ1F'); // 用你的 EmailJS 用户 ID 替换 'YOUR_USER_ID'
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    // 获取表单和状态消息元素
+    const form = document.getElementById('contact-form');
+    const statusMessage = document.getElementById('status-message');
 
-    try {
-        const response = await fetch('http://localhost:3001/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ name, email, message })
+    // 监听表单提交事件
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();  // 防止表单提交并刷新页面
+
+        // 获取表单数据
+        const name = form.name.value;
+        const email = form.email.value;
+        const phone = form.phone.value;
+        const message = form.message.value;
+
+        // 使用 EmailJS 发送邮件
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            from_phone: phone,
+            message: message
+        };
+
+    emailjs.send("service_959e2bo","template_chpyn2l", templateParams)
+        .then(function(response) {
+            console.log('Success:', response);
+            statusMessage.textContent = 'Your message has been sent successfully!';
+            statusMessage.style.color = 'green';
+            form.reset();  // 清空表单
+        }, function(error) {
+            console.log('Failed:', error);
+            statusMessage.textContent = 'Failed to send message. Please try again.';
+            statusMessage.style.color = 'red';
         });
-
-        const data = await response.json();
-        if (data.success) {
-            alert('Message sent successfully!');
-        } else {
-            alert('Failed to send message: ' + data.message);
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('Failed to send message.');
-    }
 });
+
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav a[data-target]').forEach(link => {
     link.addEventListener('click', function (event) {

@@ -262,7 +262,6 @@ footer p {
     }
 
     .background-slideshow {
-        background-size: contain; /* 让整个图片完整显示 */
         background-position: center center; /* 保持居中 */
         animation: slideshow 15s infinite; /* 增加动画时间，减少频繁切换 */
 
